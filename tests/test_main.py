@@ -7,7 +7,7 @@ class Tests(unittest.TestCase):
         self.assertFalse(is_separator("| -- | x |"))
     def test_aligns_columns(self):
         result = align_markdown("| A | Longer |\n| --- | --- |\n| x | y |\n")
-        self.assertIn("| A | Longer |", result)
+        self.assertIn("| A   | Longer |", result)
         self.assertIn("| --- | ------ |", result)
     def test_preserves_non_table_text(self):
         text = "# Title\n\nnot a table\n"
